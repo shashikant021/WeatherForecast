@@ -1,12 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="30">
     <title>Weather Forecast</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="output.css">
 </head>
-<body>
-    <h1 class="text-blue-800 text-9xl">Weather Forecast</h1>
+
+<body class="bg-gray-100 ">
+    <!-- Header Section -->
+    <header class="text-center bg-blue-800 p-3 md:p-4 lg:mb-2">
+        <h1 class="text-xl md:text-3xl font-bold text-white">Weather Dashboard</h1>
+    </header>
+    <!-- Main container for the Weather Dashboard -->
+    <main class="max-w-5xl mx-auto lg:mt-5 mb-7 p-5 bg-blue-300 shadow-lg lg:rounded-lg">
+        <!-- Search Section -->
+        <div class="mb-10 mt-10 lg:mt-0">
+            <div class="flex flex-col space-y-5 md:space-y-5 lg:space-y-0 md:space-x-3">
+                <label for="cityName" class="text-xl lg:text-2xl font-bold">Enter a City Name</label>
+                <input type="text" placeholder="E.g., New Delhi, Ranchi, Mumbai"
+                    class="city-input w-full p-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <div class="flex space-x-5 justify-between lg:mt-3">
+                    <button
+                        class="search-btn bg-blue-600 text-white px-6 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300">
+                        Search
+                    </button>
+                    <button
+                        class="use-current-location-btn bg-gray-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-gray-300 transition duration-300">
+                        Use Current Location
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Current Weather Card Section -->
+        <div class="current-weather-cards bg-gray-500 text-white p-5 rounded-lg shadow-md mb-8">
+            <div class="flex justify-around items-center">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-semibold">London (2024-04-23)</h2>
+                    <p class="text-lg">Temperature: 7.06°C</p>
+                    <p>Wind: 2.85 M/S</p>
+                    <p>Humidity: 88%</p>
+                </div>
+                <div class="text-5xl text-blue-300">
+                    <i class="fa-solid fa-cloud-sun-rain"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5-Day Forecast Section -->
+        <h3 class="text-center m-4 font-bold text-2xl text-black">5-Day Forecast</h3>
+        <div class="weather-cards grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+
+            <div class="bg-gray-500 text-white p-4 rounded-lg shadow-sm text-center">
+                <p class="text-lg font-semibold">(2024-04-24)</p>
+                <i class="fa-solid fa-cloud-moon-rain text-2xl text-blue-300"></i>
+                <p>Temp: 5.67°C</p>
+                <p>Wind: 2.77 M/S</p>
+                <p>Humidity: 76%</p>
+            </div>
+
+
+            <div class="bg-gray-500 text-white p-4 rounded-lg shadow-sm text-center">
+                <p class="text-lg font-semibold">(2024-04-25)</p>
+                <i class="fa-solid fa-cloud-moon-rain text-2xl text-blue-300"></i>
+                <p>Temp: 5.23°C</p>
+                <p>Wind: 1.46 M/S</p>
+                <p>Humidity: 71%</p>
+            </div>
+
+
+            <div class="bg-gray-500 text-white p-4 rounded-lg shadow-sm text-center">
+                <p class="text-lg font-semibold">(2024-04-26)</p>
+                <i class="fa-solid fa-cloud-moon-rain text-2xl text-blue-300"></i>
+                <p>Temp: 7.66°C</p>
+                <p>Wind: 1.87 M/S</p>
+                <p>Humidity: 91%</p>
+            </div>
+
+
+            <div class="bg-gray-500 text-white p-4 rounded-lg shadow-sm text-center">
+                <p class="text-lg font-semibold">(2024-04-27)</p>
+                <i class="fa-solid fa-cloud-moon-rain text-2xl text-blue-300"></i>
+                <p>Temp: 9.09°C</p>
+                <p>Wind: 3.77 M/S</p>
+                <p>Humidity: 95%</p>
+            </div>
+
+
+            <div class="bg-gray-500 text-white p-4 rounded-lg shadow-sm text-center mb-5 lg:mb-0">
+                <p class="text-lg font-semibold">(2024-04-28)</p>
+                <i class="fa-solid fa-cloud-showers-heavy text-2xl text-blue-300"></i>
+                <p>Temp: 8.46°C</p>
+                <p>Wind: 4.23 M/S</p>
+                <p>Humidity: 94%</p>
+            </div>
+
+        </div>
+
+    </main>
+    <!-- Linking the custom JavaScript file -->
+    <script src="index.js"></script>
 </body>
+
 </html>
